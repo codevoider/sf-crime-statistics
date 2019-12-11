@@ -46,3 +46,17 @@ In this project, you will be provided with a real-world dataset, extracted from 
 ### Count result
 
 ![spark count](https://github.com/xiaoyifan/sf-crime-statistics/blob/master/result.png)
+
+## Q&A:
+
+**1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?**
+
+The performance evaluation metric we could refer to is `processedRowsPerSecond`, higher the number, better performance we have.
+
+
+**2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?**
+To make the performance better, we should maximize the `processedRowsPerSecond` as mentioned above. the most pairs are: 
+- spark.default.parallelism
+- spark.sql.shuffle.partitions
+
+to pick the parallelism, the ideal number would be `3 * CPU core`. and for partitions, asssuming we are using HDFS, typical partition size is 64MB. then the number is total data size/64MB.
