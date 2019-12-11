@@ -41,8 +41,8 @@ In this project, you will be provided with a real-world dataset, extracted from 
 
 ### Kafka consumer output data
 
-![kafka data](https://github.com/xiaoyifan/sf-crime-statistics/blob/master/data.PNG)
+![kafka data](https://github.com/xiaoyifan/sf-crime-statistics/blob/master/data.png)
 
 ### Count result
 
-![spark count](https://github.com/xiaoyifan/sf-crime-statistics/blob/master/result.PNG)
+![spark count](https://github.com/xiaoyifan/sf-crime-statistics/blob/master/result.png)

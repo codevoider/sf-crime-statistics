@@ -70,7 +70,6 @@ def run_spark_job(spark):
         .groupBy(
         psf.window(distinct_table.call_date_time, "10 minutes"),
         psf.col("original_crime_type_name")
-        #                     distinct_table.disposition
     ) \
         .count()
 
